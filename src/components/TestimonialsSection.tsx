@@ -25,7 +25,11 @@ const testimonials = [
 
 const TestimonialsSection = () => {
   return (
-    <section id="testimonials" className="bg-light-100 py-20">
+    <section
+      id="testimonials"
+      className="py-20"
+      style={{ backgroundColor: "#EAF2F3" }}
+    >
       <div className="section-padding">
         <div className="text-center mb-16">
           <h2 className="section-title">Our Clients Love Us</h2>
@@ -36,8 +40,8 @@ const TestimonialsSection = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {testimonials.map((testimonial) => (
-            <Card 
-              key={testimonial.id} 
+            <Card
+              key={testimonial.id}
               className="hover:-translate-y-2 transition-transform duration-300 border-t-4 border-t-accent"
             >
               <CardContent className="pt-6 flex flex-col h-full">
@@ -48,7 +52,7 @@ const TestimonialsSection = () => {
                 </div>
 
                 <p className="italic text-neutral-600 mb-6">"{testimonial.content}"</p>
-                
+
                 <div className="mt-auto font-medium text-primary-500">
                   {testimonial.name}
                 </div>
@@ -57,7 +61,7 @@ const TestimonialsSection = () => {
           ))}
         </div>
       </div>
-    </section>
+    </section >
   );
 };
 
