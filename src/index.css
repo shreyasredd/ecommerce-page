@@ -1,0 +1,82 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Inter:wght@300;400;500;600&display=swap');
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 193 62% 22%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 197 34% 58%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --success: 151 65% 35%;
+    --success-foreground: 210 40% 98%;
+
+    --neutral: 208 19% 37%;
+    --neutral-foreground: 210 40% 98%;
+
+    --accent: 39 100% 50%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-inter;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-roboto font-bold;
+  }
+}
+
+@layer components {
+  .section-padding {
+    @apply py-16 px-4 md:py-24 md:px-8 max-w-7xl mx-auto;
+  }
+  .gradient-bg {
+    @apply bg-gradient-to-br from-primary/90 to-secondary/90;
+  }
+  .subtle-animation {
+    @apply transition-all duration-300 ease-in-out;
+  }
+  .service-card {
+    @apply bg-white p-6 rounded-lg shadow-md hover:shadow-lg subtle-animation border border-gray-100;
+  }
+  .hero-text {
+    @apply text-4xl md:text-5xl lg:text-6xl font-bold leading-tight;
+  }
+  .section-title {
+    @apply text-3xl md:text-4xl font-bold mb-6 text-primary;
+  }
+  .section-subtitle {
+    @apply text-xl md:text-2xl font-medium text-neutral mb-12 max-w-3xl;
+  }
+}
